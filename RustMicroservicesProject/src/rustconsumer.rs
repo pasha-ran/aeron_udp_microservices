@@ -1,7 +1,7 @@
 //The purpose of this microservice is to consume aeron udp messages, serialized in flatbuffer
 
 use aeron_rs::aeron::SubscriptionBuilder;
-use aeron_rs::aeron::Context;
+use aeron_rs::aeron::context::Context;
 use aeron_rs::aeron::Publication;
 use aeron_rs::buffer::AlignedBuffer;
 use aeron_rs::utils::errors::AeronError;

@@ -102,8 +102,8 @@ pub fn get_root_as_message<'a>(buf: &'a [u8]) -> Message<'a> {
 }
 
 #[inline]
-pub fn get_size_prefixed_root_as_message<'a>(buf: &'a [u8]) -> Message<'a> {
-  flatbuffers::get_size_prefixed_root::<Message<'a>>(buf)
+pub fn get_size_prefixed_root_as_message<'a>(buf: &'a [u8]) -> Result<T, E> {
+  flatbuffers::size_prefixed_root::<Message<'a>>(buf)
 }
 
 #[inline]
